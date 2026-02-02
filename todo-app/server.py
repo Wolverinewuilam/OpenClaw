@@ -3,8 +3,8 @@ import socketserver
 import os
 from pathlib import Path
 
-# 設定端口（避免與 OpenClaw 的默認端口 18789 衝突）
-PORT = 8082
+# 設定端口（使用可用端口）
+PORT = 8000
 
 # 設定服務器根目錄為 todo-app
 WEB_DIR = Path("/workspaces/OpenClaw/todo-app")
