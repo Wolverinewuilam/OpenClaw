@@ -1,39 +1,47 @@
-# Modern Todo List Application
+# Modern Todo List App
 
-一個現代化的待辦事項清單應用，具有響應式設計和直觀的用戶界面。
+A beautifully designed, responsive todo list application with modern UI/UX features.
 
-## 功能特性
+## Features
 
-- 添加、編輯和刪除待辦事項
-- 標記任務為已完成
-- 按狀態篩選任務（全部、待完成、已完成）
-- 清除已完成的任務
-- 數據持久化（使用瀏覽器本地存儲）
-- 響應式設計，支持移動設備
-- 現代化的 UI 設計
+- ✅ Add, edit, and delete tasks
+- ✅ Mark tasks as complete/incomplete
+- ✅ Filter tasks (All, Active, Completed)
+- ✅ Task statistics and counters
+- ✅ Local storage persistence
+- ✅ Smooth animations and transitions
+- ✅ Responsive design (mobile-friendly)
+- ✅ Modern gradient UI design
+- ✅ Clear completed tasks functionality
 
-## 技術棧
+## Design Highlights
 
-- HTML5
-- CSS3（現代樣式和動畫）
-- JavaScript（ES6+）
-- 响應式設計
-- 本地存儲
+- Modern gradient color scheme
+- Smooth animations and transitions
+- Clean, minimalist interface
+- Intuitive user experience
+- Responsive layout for all devices
 
-## 使用方法
+## Technical Details
 
-1. 打開 `index.html` 文件在瀏覽器中查看應用
-2. 在輸入框中輸入新任務並點擊 "+" 或按 Enter 鍵添加
-3. 點擊任務旁的複選框標記為已完成
-4. 使用頂部篩選器查看不同狀態的任務
-5. 點擊垃圾桶圖標刪除任務
-6. 點擊鉛筆圖標編輯任務
-7. 點擊"清除已完成"按鈕移除所有已完成任務
+- Pure HTML, CSS, and JavaScript (no frameworks)
+- LocalStorage for data persistence
+- Python server for serving files
+- Runs on port 8082 to avoid conflicts
 
-## 設計特點
+## How to Run
 
-- 漸變色彩方案
-- 平滑過渡動畫
-- 直觀的用戶界面
-- 移動友好設計
-- 視覺反饋效果
+1. Navigate to the todo-app directory
+2. Run the Python server:
+   ```bash
+   python3 server.py
+   ```
+3. Visit `http://localhost:8082` in your browser
+
+## Files Structure
+
+- `index.html` - Main application structure
+- `css/style.css` - Modern styling with gradients and animations
+- `js/app.js` - Interactive functionality
+- `server.py` - Python server to serve the application
+- `assets/` - Additional assets (if any)
