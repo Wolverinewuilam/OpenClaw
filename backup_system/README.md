@@ -1,53 +1,46 @@
-# WhatsApp Gateway Troubleshooting Suite
+# Connection Troubleshooting Tools
 
-This suite contains tools and documentation to handle WhatsApp gateway disconnection issues, specifically addressing error 1006 (abnormal WebSocket closure).
+This directory contains tools for diagnosing and troubleshooting connection issues with the OpenClaw system, particularly focusing on WhatsApp gateway connectivity.
 
-## Components
+## Tools Included
 
-### 1. Troubleshooting Guide (`whatsapp_troubleshooting.md`)
-Comprehensive guide explaining the disconnection issue, root causes, and resolution steps.
+### 1. Connection Diagnostics (`connection_diagnostics.py`)
+A comprehensive diagnostic tool that checks various aspects of the system's connectivity:
 
-### 2. Auto-Reconnection Script (`whatsapp_reconnect.sh`)
-Bash script to automatically reconnect the WhatsApp gateway when disconnections occur.
-
-### 3. Connection Monitor (`whatsapp_monitor.py`)
-Python script that continuously monitors the WhatsApp gateway connection and performs automatic recovery.
-
-### 4. Health Check System (`whatsapp_health_check.md`)
-Documentation for implementing scheduled health checks using cron jobs.
+- Network connectivity (DNS, general internet access)
+- WhatsApp-specific connectivity (to web.whatsapp.com)
+- OpenClaw gateway status
+- Running processes
+- System resources
+- WhatsApp session details
 
 ## Usage
 
-### Manual Reconnection
+### Running Connection Diagnostics
 ```bash
-chmod +x whatsapp_reconnect.sh
-./whatsapp_reconnect.sh
+python3 connection_diagnostics.py
 ```
 
-### Continuous Monitoring
-```bash
-python3 whatsapp_monitor.py
-```
+This will perform a comprehensive check and provide:
+- A summary of connection status
+- Detailed diagnostic information
+- Recommendations for fixing issues
+- A JSON report saved to a timestamped file
 
-### Scheduled Health Checks
-Add to crontab:
-```bash
-# Check connection every 5 minutes
-*/5 * * * * cd /path/to/whatsapp_troubleshooting && python3 whatsapp_monitor.py
-```
+## When to Use These Tools
 
-## Error 1006 Resolution
+Use these troubleshooting tools when experiencing:
+- WhatsApp gateway disconnections
+- Connection timeouts
+- Intermittent connectivity issues
+- Before implementing backup/redundancy solutions
 
-The error 1006 indicates an abnormal WebSocket closure. This suite provides:
+## Backup vs. Troubleshooting
 
-1. **Detection**: Automated detection of disconnection events
-2. **Recovery**: Automatic reconnection attempts
-3. **Monitoring**: Continuous monitoring with logging
-4. **Alerting**: Notification system for persistent issues
+Note the distinction between:
+- **Troubleshooting tools** (this directory): Used to diagnose and fix connection issues
+- **Backup/Redundancy tools** (backup_system directory): Used to maintain system uptime and prevent issues
 
-## Implementation
+## Output Format
 
-1. Place all files in the `skills/whatsapp_troubleshooting/` directory
-2. Make scripts executable: `chmod +x whatsapp_reconnect.sh`
-3. Configure cron jobs as needed for automated monitoring
-4. Test the reconnection script after installation
+Diagnostic tools output structured JSON data along with human-readable reports, making it easy to analyze issues programmatically or manually.
