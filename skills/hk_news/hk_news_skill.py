@@ -31,6 +31,11 @@ def get_hk_news():
         'RTHK Chinese International News': 'https://rthk.hk/rthk/news/rss/c_expressnews_cinternational.xml',
         'RTHK Chinese Finance News': 'https://rthk.hk/rthk/news/rss/c_expressnews_cfinance.xml',
         'RTHK Chinese Sports News': 'https://rthk.hk/rthk/news/rss/c_expressnews_csports.xml',
+        'SCMP Hong Kong News': 'https://www.scmp.com/rss/3/feed',
+        'SCMP Greater China News': 'https://www.scmp.com/rss/4/feed',
+        'SCMP Opinion': 'https://www.scmp.com/rss/7/feed',
+        'SCMP Business': 'https://www.scmp.com/rss/5/feed',
+        'SCMP Tech': 'https://www.scmp.com/rss/36/feed',
     }
     
     news_results = {}
