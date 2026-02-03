@@ -23,6 +23,14 @@ def get_hk_news():
         'HK All Press Releases': 'https://www.info.gov.hk/gia/rss/general_en.xml',
         'RTHK Local News': 'https://rthk.hk/rthk/news/rss/e_expressnews_elocal.xml',
         'RTHK Greater China News': 'https://rthk.hk/rthk/news/rss/e_expressnews_egreaterchina.xml',
+        'RTHK International News': 'https://rthk.hk/rthk/news/rss/e_expressnews_einternational.xml',
+        'RTHK Finance News': 'https://rthk.hk/rthk/news/rss/e_expressnews_efinance.xml',
+        'RTHK Sports News': 'https://rthk.hk/rthk/news/rss/e_expressnews_esports.xml',
+        'RTHK Chinese Local News': 'https://rthk.hk/rthk/news/rss/c_expressnews_clocal.xml',
+        'RTHK Chinese Greater China News': 'https://rthk.hk/rthk/news/rss/c_expressnews_cgreaterchina.xml',
+        'RTHK Chinese International News': 'https://rthk.hk/rthk/news/rss/c_expressnews_cinternational.xml',
+        'RTHK Chinese Finance News': 'https://rthk.hk/rthk/news/rss/c_expressnews_cfinance.xml',
+        'RTHK Chinese Sports News': 'https://rthk.hk/rthk/news/rss/c_expressnews_csports.xml',
     }
     
     news_results = {}
